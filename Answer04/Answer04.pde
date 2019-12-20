@@ -1,13 +1,21 @@
-int num = 515555;
+int num = 1111;
 
 int sum = 0;
 
-while(num != 0){
-  sum += num % 10;
-  num /= 10;
+int digit = 1;
+
+while(num/(digit) != 0){
+  digit*=10;
+}
+digit /= 10;
+
+for(int i = 1; i <= digit ;i *= 10){
+  
+  sum = ((num/i)%10 + sum)%5;
+
 }
 
-switch(sum%5){
+switch(sum){
   case 0:
     println('a');
     break;
